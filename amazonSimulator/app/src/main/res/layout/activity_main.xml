@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/blue_bg"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:contentDescription="@string/top_layer_bg_cd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/amznBlue" />
+
+    <ImageView
+        android:id="@+id/white_bg"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/white_bg_cd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/amazon_logo"
+        app:srcCompat="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/darkblue_bg"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/amznDarkBlue"
+        android:contentDescription="@string/darkblue_bg_cd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blue_bg" />
+
+    <ImageButton
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/search_button_cd"
+        app:layout_constraintBottom_toBottomOf="@+id/white_bg"
+        app:layout_constraintStart_toStartOf="@+id/white_bg"
+        app:layout_constraintTop_toTopOf="@+id/white_bg"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <EditText
+        android:id="@+id/search_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/search_hint_txt"
+        android:inputType="textPersonName"
+        android:autofillHints=""
+        app:layout_constraintBottom_toBottomOf="@+id/white_bg"
+        app:layout_constraintEnd_toStartOf="@+id/camera_button"
+        app:layout_constraintStart_toEndOf="@+id/search_button"
+        app:layout_constraintTop_toTopOf="@+id/white_bg" />
+
+    <ImageButton
+        android:id="@+id/menu_button"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="40dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:baselineAlignBottom="false"
+        android:contentDescription="@string/menu_button_cd"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/blue_bg"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+
+    <ImageView
+        android:id="@+id/amazon_logo"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/amazon_logo_cd"
+        app:layout_constraintStart_toEndOf="@+id/menu_button"
+        app:layout_constraintTop_toTopOf="@+id/blue_bg"
+        app:srcCompat="@drawable/amazon_logo" />
+
+    <ImageButton
+        android:id="@+id/cart_button"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/cart_button_cd"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/amazon_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/blue_bg"
+        app:srcCompat="@drawable/whitecart" />
+
+    <ImageButton
+        android:id="@+id/camera_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/camera_button"
+        app:layout_constraintBottom_toBottomOf="@+id/white_bg"
+        app:layout_constraintEnd_toEndOf="@+id/white_bg"
+        app:layout_constraintTop_toTopOf="@+id/white_bg"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <ImageView
+        android:id="@+id/location_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/location_icon_cd"
+        app:layout_constraintBottom_toBottomOf="@+id/darkblue_bg"
+        app:layout_constraintStart_toStartOf="@+id/darkblue_bg"
+        app:layout_constraintTop_toBottomOf="@+id/blue_bg"
+        app:srcCompat="@android:drawable/ic_menu_mylocation" />
+
+    <TextView
+        android:id="@+id/deliver_addr"
+        style="@style/white_Style"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/deliver_addr_text"
+        app:layout_constraintBottom_toBottomOf="@+id/darkblue_bg"
+        app:layout_constraintStart_toEndOf="@+id/location_icon"
+        app:layout_constraintTop_toBottomOf="@+id/blue_bg" />
+
+    <EditText
+        android:id="@+id/location_input"
+        style="@style/white_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/location_input_cd"
+        android:ems="10"
+        android:hint="@string/location_hint"
+        android:autofillHints=""
+        android:textColorHint="@color/Grey"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/darkblue_bg"
+        app:layout_constraintStart_toEndOf="@+id/deliver_addr" />
+
+    <ImageView
+        android:id="@+id/firestick_ad"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:contentDescription="@string/firestick_ad_cd"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/darkblue_bg"
+        app:srcCompat="@drawable/firestick_ad" />
+
+    <ImageView
+        android:id="@+id/white_bg_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/white_bg_2_cd"
+        app:layout_constraintBottom_toBottomOf="@+id/quickbuy_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firestick_ad"
+        app:srcCompat="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/quickbuy_img"
+        android:layout_width="294dp"
+        android:layout_height="61dp"
+        android:contentDescription="@string/quickbuy_img_cd"
+        app:layout_constraintStart_toStartOf="@+id/white_bg_2"
+        app:layout_constraintTop_toBottomOf="@+id/firestick_ad"
+        app:srcCompat="@drawable/deal" />
+
+    <Button
+        android:id="@+id/add_cart_button"
+        style="@style/white_Style"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/roundedbutton"
+        android:text="@string/add_cart_text"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/white_bg_2"
+        app:layout_constraintEnd_toEndOf="@+id/white_bg_2"
+        app:layout_constraintStart_toEndOf="@+id/quickbuy_img"
+        app:layout_constraintTop_toBottomOf="@+id/firestick_ad" />
+
+    <TextView
+        android:id="@+id/Deal_day_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/Deal_day_text"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/white_bg_2" />
+
+    <ImageView
+        android:id="@+id/acer_tv_image"
+        android:layout_width="300dp"
+        android:layout_height="230dp"
+        android:contentDescription="@string/acer_tv_img_cd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/white_bg_2"
+        app:srcCompat="@drawable/acer_monitor" />
+
+    <TextView
+        android:id="@+id/prices_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:text="@string/prices_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/white_bg_2" />
+
+    <Button
+        android:id="@+id/all_deals_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="@string/all_deals_text"
+        android:textColor="@color/amznBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hrz_line" />
+
+    <ImageView
+        android:id="@+id/hrz_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/Grey"
+        android:contentDescription="@string/hrz_line_cd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prices_tv"
+        app:srcCompat="@color/Grey" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

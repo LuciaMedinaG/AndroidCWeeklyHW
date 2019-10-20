@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">amazonSimulator</string>
+    <string name="deliver_addr_text">Deliver to</string>
+    <string name="add_cart_text">Add to Cart</string>
+    <string name="Deal_day_text">Deal of the day</string>
+    <string name="prices_text">$130.00 - $250.34</string>
+    <string name="all_deals_text">See all deals</string>
+    <string name="top_layer_bg_cd">Top layer background</string>
+    <string name="white_bg_cd">White background for search</string>
+    <string name="darkblue_bg_cd">Dark blue background for location</string>
+    <string name="search_button_cd">Search button</string>
+    <string name="search_hint_txt">What are you looking for?</string>
+    <string name="menu_button_cd">Icon for main menu</string>
+    <string name="amazon_logo_cd">Amazon logo</string>
+    <string name="cart_button_cd">Shopping cart button</string>
+    <string name="camera_button">Camera entry button</string>
+    <string name="location_icon_cd">Location icon</string>
+    <string name="location_input_cd">Location entry information</string>
+    <string name="location_hint">Enter your location</string>
+    <string name="firestick_ad_cd">Firestick advertisement</string>
+    <string name="white_bg_2_cd">White background 2</string>
+    <string name="quickbuy_img_cd">Quick buy image</string>
+    <string name="acer_tv_img_cd">Acer tv image</string>
+    <string name="hrz_line_cd">Horizontal line</string>
+</resources>

@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.os.PersistableBundle
 import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var listaFragment = ListaFragment()
+        val listaFragment = ListaFragment()
         var detalleFragment = DetalleFragment()
         val fragmentManager: FragmentManager = this.getSupportFragmentManager()
         val fragmentTransaction = fragmentManager.beginTransaction()
@@ -28,15 +29,13 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.add(R.id.FrameLayoutList, listaFragment)
         fragmentTransaction.commit()
 
-       /// listaFragment.detalleButton.setOnClickListener { view ->
-            listaFragment.view.detalleButton.setOnClickListener {
-                fragmentTransaction.replace(R.id.FrameLayoutList, detalleFragment)
-                fragmentTransaction.commit()
+    }
 
-            }
-
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
 
     }
+
 }
 
 

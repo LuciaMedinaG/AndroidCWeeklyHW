@@ -6,16 +6,17 @@
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
-    <fragment
-        android:id="@+id/fragment2"
-        android:name="com.example.fragmenthw.ListaFragment"
-        android:layout_width="350dp"
-        android:layout_height="match_parent" />
+    <FrameLayout
+        android:id="@+id/FrameLayoutList"
+        android:layout_width="300dp"
+        android:layout_height="match_parent">
 
-    <fragment
-        android:id="@+id/fragment3"
-        android:name="com.example.fragmenthw.DetalleFragment"
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/FrameLayoutDetail"
         android:layout_width="fill_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
 
+    </FrameLayout>
 </LinearLayout>

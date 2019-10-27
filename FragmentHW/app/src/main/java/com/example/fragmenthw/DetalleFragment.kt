@@ -1,12 +1,15 @@
 package com.example.fragmenthw
 
 import android.content.Context
+import android.content.res.Configuration
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import kotlinx.android.synthetic.main.fragment_lista.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -29,13 +32,21 @@ class DetalleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+         val listaFragment = ListaFragment()
+         val view: View = inflater.inflate(R.layout.fragment_detalle, container, false)
+         val listaButton = view.findViewById(R.id.listabutton) as Button
 
-        return inflater.inflate(R.layout.fragment_detalle, container, false)
+ /*       listaButton.setOnClickListener { rootView ->
+            Log.i("DetalleFragment", "ButtonClicked")
+
+            val fragmentTransaction = fragmentManager?.beginTransaction()
+
+
+            fragmentTransaction?.replace(R.id.FrameLayoutList, listaFragment)
+            fragmentTransaction?.commit()
+        }*/
+
+        return view
     }
 
-    override fun onResume() {
-        super.onResume()
-
-
-    }
 }
